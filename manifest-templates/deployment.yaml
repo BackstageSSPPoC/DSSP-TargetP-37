@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: ${APP_NAME}
-          image: xyz:1
+          image: xyz:324
           ports:
             - containerPort: ${APP_PORT}
           env:
