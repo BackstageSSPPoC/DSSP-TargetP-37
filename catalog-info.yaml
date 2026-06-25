@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DSSP-TargetP-37
+  annotations:
+    github.com/project-slug: BackstageSSPPoC/DSSP-TargetP-37
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: Backstage_SSP_PoC/DSSP-TargetP-37/main
+    argocd/app-name: dssp-targetp-37-dev
+    backstage.io/kubernetes-id: DSSP-TargetP-37
+    sonarqube.org/project-key: dssp-targetp-37
+    prometheus.io/rule: "kube_pod_container_resource_requests{pod=~'dssp-targetp-37.*'}|resource,kube_pod_container_status_restarts_total{pod=~'dssp-targetp-37.*'}|container"
+    prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
+    prometheus.io/labels: "namespace=dev"
+spec:
+  type: service
+  lifecycle: dev
+  owner: user:default/chaitanya-shekhar-pandey
