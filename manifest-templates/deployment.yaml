@@ -11,19 +11,19 @@ spec:
   replicas: 0
   selector:
     matchLabels:
-      app: ${APP_NAME}
+      app: ${APP_NAE}
   template:
     metadata:
       labels:
-        app: ${APP_NAME}
+        app: ${APP_NAE}
         backstage.io/kubernetes-id: ${APP_NAME}
         environment: ${NAMESPACE}
     spec:
       containers:
         - name: ${APP_NAME}
-          image: ${DOCKER_IMGE}
+          image: ${DOCKER_IMAGE}
           ports:
-            - containerPort: ${APP_PORT}
+            - containerPort: ${APP_POT}
           env:
             - name: APP_ENV
               value: "${NAMESPACE}"
