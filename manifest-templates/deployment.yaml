@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ${APP_NAE}
+        app: ${APP_NAME}
         backstage.io/kubernetes-id: ${APP_NAME}
         environment: ${NAMESPACE}
     spec:
