@@ -23,7 +23,7 @@ spec:
         - name: ${APP_NAME}
           image: ${DOCKER_IMAGE}
           ports:
-            - containerPort: ${APP_POT}
+            - containerPort: ${APP_PORT}
           env:
             - name: APP_ENV
               value: "${NAMESPACE}"
